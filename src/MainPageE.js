@@ -193,7 +193,6 @@ const Banner = styled("div")({
     position: `absolute`,
   });
 
-
 function MainPage() {
   return (
       <Container>
@@ -299,7 +298,6 @@ bian87@dgu.ac.kr`}
             </UserDeviceSize>
   
       </Container>);
-
   }
 
 export default MainPage;
