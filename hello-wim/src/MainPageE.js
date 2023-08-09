@@ -150,7 +150,7 @@ const IntroTextDesign = styled("div")({
   color: `rgba(0, 0, 0, 1)`,
   fontStyle: `normal`,
   fontFamily: `Inter`,
-  fontWeight: `400`,
+  fontWeight: `460`,
   fontSize: `25px`,
   letterSpacing: `0px`,
 });
