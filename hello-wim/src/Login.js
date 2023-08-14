@@ -17,7 +17,8 @@ function Create(Props){
         <form onSubmit={(event)=>{
             event.preventDefault();
         }}>
-    <p><input type= "text" name= "Id" placeholder="id" /></p>
+    <p><input type= "text" 
+    ｑ= "Id" placeholder="id" /></p>
     <p><input type= "text" name= "Password" placeholder="password" /></p>
     <p><input type = "submit" value= "Login" /></p>
     </form>
