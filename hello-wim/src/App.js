@@ -1,11 +1,11 @@
 // App.js
 import React from 'react';
-import LoginPage from './LoginPage';
+import Login from './Login';
 
 function App() {
   return (
     <div>
-      <LoginPage />
+      <Login />
     </div>
   );
 }
