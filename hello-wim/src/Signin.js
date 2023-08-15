@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
+import Card from '@mui/material/Card';
 
 
 
@@ -26,10 +27,13 @@ export default function Signin(){
             alignItems: 'center',
           }}
         >
+
+
              <Typography component="h1" variant="h2" sx={{mb: 10}}>
             WIM
           </Typography>
 
+          <Card sx={{ maxWidth: 345, height: 400 }}>
             <Typography component="h1" varient="h5">
                 Sign in
             </Typography>
@@ -61,6 +65,8 @@ export default function Signin(){
             <Link> Sign up</Link>
             </Grid>
             </Grid>
+
+            </Card>
 
             </Box>
         </Container>

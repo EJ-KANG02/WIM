@@ -1,12 +1,10 @@
 // App.js
 import React from 'react';
-import Signin from './Signin';
+import Signin from './Signin.js';
 
 function App() {
   return (
-    <div>
-      <Signin />
-    </div>
+    <Signin />
   );
 }
 
