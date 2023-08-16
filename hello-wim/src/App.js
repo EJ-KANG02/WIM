@@ -1,10 +1,10 @@
 // App.js
 import React from 'react';
-import Signin from './Signin.js';
+import Main from './containers/Main/Main.js';
 
 function App() {
   return (
-    <Signin />
+    <Main />
   );
 }
 
