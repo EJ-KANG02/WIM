@@ -1,0 +1,12 @@
+.form-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem 10rem;
+}
+
+.form-group {
+    padding: 1rem 0.75rem;
+    flex: 1;
+    flex-grow: 1; /* 가능한 경우 모든 여유 공간을 사용하여 확장 */
+}

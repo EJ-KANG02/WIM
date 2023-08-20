@@ -1,0 +1,52 @@
+
+.sign-Box {
+    text-decoration: none;
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+    border: none;
+    border-radius: 20px;
+    height: 40rem;
+    width: 30rem;
+    line-height: 36px;
+    padding: 2rem; /* 내부 패딩 추가 */
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  
+  .sign-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    height: 960px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    flex-direction: column;
+    background-color: var(--primaryColor);
+  }
+
+.SignInform {
+    background-color: var(--mainWhite);
+    border: solid 2px var(--secondColor); 
+    outline: none;
+    height: 3rem;
+    width: 20rem;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 3rem; /* 텍스트창 간 간격 추가 */
+}
+
+.sign-btn {
+    margin-top: 2rem; /* 버튼 위쪽에 여백 추가 */
+    background-color: var(--primaryColor);
+    color: var(--mainBlack);
+    border: none;
+    border-radius: 2px;
+    width: 20rem;
+    height: 3rem;
+    font-size: 16px;
+    display: block;
+    margin: 1rem auto 0;
+    cursor: pointer;
+}
