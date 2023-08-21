@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Signin.css'; // 스타일시트 이름을 바꿔서 적용해야 합니다.
+import './Signin.css'; 
 
 const Signup = () => {
   const [id, setId] = useState('');
@@ -38,34 +38,42 @@ const Signup = () => {
 
   return (
     <main className="sign-container">
-      <h1>WIM</h1>
+      <h1 style={{fontSize: '50px'}}>WIM</h1>
 
-      <div className="sign-box">
-        <h2>Signup</h2>
+      <div className="sign-Box">
+        <h2 style={{color: 'black', marginBottom: '4rem'}}>Signup</h2>
         <form onSubmit={handleSignup}>
           <div>
+          <label htmlFor="Id" />
             <input
+            className="SignInform"
               type="text"
               name="Id"
               placeholder="Id"
               value={id}
               onChange={(e) => setId(e.target.value)}
             />
+            <label htmlFor="Id" />
             <input
+            className="SignInform"
               type="email"
               name="Email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            <label htmlFor="Id" />
             <input
+            className="SignInform"
               type="password"
               name="Password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <label htmlFor="Id" />
             <input
+            className="SignInform"
               type="tel"
               name="Callnumber"
               placeholder="Call Number"
