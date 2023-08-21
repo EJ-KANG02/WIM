@@ -80,7 +80,7 @@ const handleAlert = ({type, text}) => {
        {alert.show ? <Alert type={alert.type} text={alert.text}/> : null}
        <div className="Control">
        <button className="btn"><Link to="/signin">Signin</Link></button>
-       <button className="btn">Signup</button>
+       <button className="btn"><Link to="/signup">Signup</Link></button>
        </div>
       <div className="Banner">
       <h1 style={{fontSize: '50px'}}>WIM</h1>

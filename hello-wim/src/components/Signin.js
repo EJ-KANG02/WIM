@@ -16,7 +16,7 @@ const Signin = () => {
 
   const handleSignin = (e) => {
     e.preventDefault(); // 폼 제출을 막아 페이지 새로고침을 방지합니다.
-    
+
     if (id === 'admin' && password === 'password') {
       setLoggedIn(true);
       localStorage.setItem('loggedIn', 'true'); // 로컬 스토리지에 로그인 상태 저장
