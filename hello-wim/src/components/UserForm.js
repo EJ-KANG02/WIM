@@ -1,15 +1,13 @@
 import React from 'react';
 import InputField from './InputField';
-import Button from './Button';
 import './UserForm.css';
 
 const UserForm = ({
   handleName, handleSchool, handleCall, handleEmail,
-  handleSubmit, name, school, call, email, edit
+  handleSubmit, name, school, call, email, edit, index
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <div className="form-center">
         <div className="form-group">
           <InputField 
             label="Name" 
@@ -17,7 +15,7 @@ const UserForm = ({
             placeholder="your name"
             value={name}
             readOnly={!edit}
-            onChange={(e) => handleName(e.target.value)}
+            onChange={(e) => handleName(e.target.value, index)}
           />
 <InputField 
             label="School" 
@@ -25,7 +23,7 @@ const UserForm = ({
             placeholder="your school"
             value={school}
             readOnly={!edit}
-            onChange={(e) => handleSchool(e.target.value)}
+            onChange={(e) => handleSchool(e.target.value, index)}
           />
 
 <InputField 
@@ -34,7 +32,7 @@ const UserForm = ({
             placeholder="your call"
             value={call}
             readOnly={!edit}
-            onChange={(e) => handleCall(e.target.value)}
+            onChange={(e) => handleCall(e.target.value, index)}
           />
 
 <InputField 
@@ -43,11 +41,9 @@ const UserForm = ({
             placeholder="your email"
             value={email}
             readOnly={!edit}
-            onChange={(e) => handleEmail(e.target.value)}
+            onChange={(e) => handleEmail(e.target.value, index)}
           />
        </div>
-      </div>
-      <Button type='submit' text={edit ? "제출" : "수정"} />
     </form>
   )
 }

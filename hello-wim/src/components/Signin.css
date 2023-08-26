@@ -1,5 +1,5 @@
 
-.sign-Box {
+.Signin-Box {
     text-decoration: none;
     color: var(--mainBlack);
     background-color: var(--mainWhite);
@@ -13,7 +13,7 @@
     flex-direction: column;
   }
   
-  .sign-container {
+  .Signin-container {
     display: flex;
     margin: 0 auto;
     max-width: 1440px;
@@ -26,7 +26,7 @@
     background-color: var(--primaryColor);
   }
 
-.SignInform {
+.SigninInform {
     background-color: var(--mainWhite);
     border: solid 2px var(--secondColor); 
     outline: none;
@@ -34,11 +34,10 @@
     width: 20rem;
     font-size: 16px;
     padding: 0;
-    margin-bottom: 3rem; /* 텍스트창 간 간격 추가 */
+    margin-bottom: 2rem; /* 텍스트창 간 간격 추가 */
 }
 
-.sign-btn {
-    margin-top: 2rem; /* 버튼 위쪽에 여백 추가 */
+.Signin-btn {
     background-color: var(--primaryColor);
     color: var(--mainBlack);
     border: none;
@@ -47,6 +46,6 @@
     height: 3rem;
     font-size: 16px;
     display: block;
-    margin: 1rem auto 0;
+    margin: 5rem auto 0;
     cursor: pointer;
 }

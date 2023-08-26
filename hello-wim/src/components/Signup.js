@@ -31,7 +31,7 @@ const Signup = () => {
     return true;
   }
 
-  const fakeAPIRequest = () => {
+  const APIRequest = () => {
     // 간단한 시뮬레이션: ID가 'admin'이면 실패로 간주하고, 그렇지 않으면 성공으로 간주
     if (id === 'admin') {
       return false;
@@ -52,7 +52,7 @@ const Signup = () => {
 
         try { //로그인 표청 시작
             // 서버에 POST 요청 보내기
-            const response = await fetch('http://localhost:3000/signin', {
+            const response = await fetch('http://localhost:3000/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ const Signup = () => {
     if(!isValid()) return;
 
     //회원가입 성공 실패 여부
-        if (fakeAPIRequest()) {
+        if (APIRequest()) {
             setErrorMsg('성공하였습니다.');
             // 여기에 추가적인 로직(로그인 페이지로 리디렉션 등)을 추가할 수 있음
           } 
@@ -87,49 +87,54 @@ const Signup = () => {
 
 
   return (
-    <main className="sign-container">
+    <main className="Signup-container">
       <h1 style={{fontSize: '50px'}}>WIM</h1>
 
-      <div className="sign-Box">
-        <h2 style={{color: 'black', marginBottom: '3rem'}}>Signup</h2>
+      <div className="Signup-Box">
+        <h2 style={{color: 'black', marginBottom: '1rem'}}>Signup</h2>
         <form onSubmit={handleSubmit}>
           <div>
+            <h4>Id</h4>
           <label htmlFor="Id" />
             <input
-            className="SignInform"
+            className="SignupInform"
               type="text"
               name="Id"
               placeholder="Id"
               value={id}
               onChange={(e) => setId(e.target.value)}
             />
-            <label htmlFor="Id" />
+            <h4>Email</h4>
+            <label htmlFor="Email" />
             <input
-            className="SignInform"
+            className="SignupInform"
               type="email"
               name="Email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="Id" />
+            <h4>Password</h4>
+            <label htmlFor="Password" />
             <input
-            className="SignInform"
+            className="SignupInform"
               type="password"
               name="Password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <label htmlFor="Id" />
+            <h4>Callnumber</h4>
+            <label htmlFor="Callnumber" />
             <input
-            className="SignInform"
+            className="SignupInform"
               type="tel"
               name="Callnumber"
               placeholder="Call Number"
               value={callnumber}
               onChange={(e) => setCallnumber(e.target.value)}
             />
+
              <label htmlFor="EmailCode"></label>
             <input
               className="SignEmailCode"
@@ -144,7 +149,7 @@ const Signup = () => {
 
           {errorMsg && <p className="error-message">{errorMsg}</p>}
 
-          <button type="submit" className="sign-btn">
+          <button type="submit" className="Signup-btn">
             Signup
           </button>
         </form>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './MenuList.css'
 
 const MenuList = () => {
@@ -6,7 +7,7 @@ const MenuList = () => {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', marginTop: '4rem'}}>
         <div className="backbtn">
     <button className='menubtn'>
-      새 포트폴리오
+      <Link to="/Newportfolio">새 포트폴리오</Link>
     </button>
     </div>
     <div className="backbtn">

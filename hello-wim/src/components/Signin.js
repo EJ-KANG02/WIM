@@ -18,7 +18,7 @@ const Signin = () => {
             password: password
         };
 
-        try { //로그인 표청 시작
+        try { //로그인 요청 시작
             // 서버에 POST 요청 보내기
             const response = await fetch('http://localhost:3000/signin', {
                 method: 'POST',
@@ -64,7 +64,7 @@ const Signin = () => {
   };
 
   return (
-    <main className="sign-container">
+    <main className="Signin-container">
       <h1 style={{fontSize: '50px'}}>WIM</h1>
 
       {isLoggedIn ? (
@@ -73,14 +73,14 @@ const Signin = () => {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-      <div className="sign-Box">
-        <h1 style={{color: 'black', marginBottom: '8rem'}}>Signin</h1>
+      <div className="Signin-Box">
+        <h1 style={{color: 'black', marginBottom: '6rem'}}>Signin</h1>
         <form onSubmit={handleSubmit}>
           <div>
-            <p>
+          <h4>Id</h4>
               <label htmlFor="userId" />
               <input
-                className="SignInform"
+                className="SigninInform"
                 id="userId"
                 type="text"
                 name="userId"
@@ -88,11 +88,11 @@ const Signin = () => {
                 value={id}
                 onChange={(e) => setId(e.target.value)}
               />
-            </p>
-            <p>
+
+<h4>Password</h4>
               <label htmlFor="userPassword" />
               <input
-                className="SignInform"
+                className="SigninInform"
                 id="userPassword"
                 type="password"
                 name="userPassword"
@@ -100,12 +100,11 @@ const Signin = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-            </p>
           </div>
 
           {errorMsg && <p className="error-message">{errorMsg}</p>}
 
-          <button type="submit" className="sign-btn">
+          <button type="submit" className="Signin-btn">
             Signin
           </button>   
         </form>

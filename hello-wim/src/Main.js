@@ -3,64 +3,68 @@ import { Link } from 'react-router-dom';
 import MenuList from './components/MenuList';
 import UserForm from './components/UserForm';
 import Alert from './components/Alert';
+import Button from './components/Button';
 import './Main.css';
 
 
 function Main() {
 
-  const [name, setName] = useState('');
+  const index1 = 1;
+  const index2 = 2;
 
-const [school, setSchool] = useState('');
+  const [name1, setName1] = useState('');
+const [school1, setSchool1] = useState('');
+const [call1, setCall1] = useState('');
+const [email1, setEmail1] = useState('');
 
-const [call, setCall] = useState('');
-
-const [email, setEmail] = useState('');
+const [name2, setName2] = useState('');
+const [school2, setSchool2] = useState('');
+const [call2, setCall2] = useState('');
+const [email2, setEmail2] = useState('');
 
 const [alert, setAlert] = useState({show: false});
 
-const [edit, setEdit] = useState(true);
+const [edit, setEdit] = useState(false);
 
 const [inputFields, setInputFields] = useState([
   {id: "Dev1", name: "", school: "", call: "", email: ""},
+  {id: "Dev2", name: "", school: "", call: "", email: ""},
+
 ])
 
 
-const handleName = (_name) => {
- setName(_name);
+const handleName = (_name, index) => {
+  if(index === 1) setName1(_name);
+  if(index === 2) setName2(_name);
 }
 
-const handleSchool = (_school) => {
-  setSchool(_school);
+const handleSchool = (_school, index) => {
+  if(index === 1) setSchool1(_school);
+  if(index === 2) setSchool2(_school);
 }
 
-const handleCall = (_call) => {
- setCall(_call);
+const handleCall = (_call, index) => {
+  if(index === 1) setCall1(_call);
+  if(index === 2) setCall2(_call);
 }
 
-const handleEmail = (_email) => {
-  setEmail(_email);
+const handleEmail = (_email, index) => {
+  if(index === 1) setEmail1(_email);
+  if(index === 2) setEmail2(_email);
 }
 
 const handleSubmit = (e) => {
   e.preventDefault();
 
     if(edit) {
-      const newInputField = inputFields.map(item => {
-        return {...item, name: name, school: school, call: call, email: email}
-      })
+      const newInputField = [...inputFields];
+      newInputField[0] = {id: "Dev1", name: name1, school: school1, call: call1, email: email1};
+      newInputField[1] = {id: "Dev2", name: name2, school: school2, call: call2, email: email2};
 
       setInputFields(newInputField);
       setEdit(false); // 수정 모드 종료
       handleAlert({type: 'success', text: "수정되었습니다. "});
       console.log('아이템이 수정되었습니다..');
-    } else {
-      const newInputField = {id: crypto.randomUUID(), name, school, call, email}
-
-    //불변성을 지켜주기 위해서 새로운 expenses를 생성
-    const newInputFields = [...inputFields, newInputField] //...객체 는 해당 배열이나 객체 값을 모조리 복사
-    setInputFields(newInputFields);
-    console.log('아이템이 추가되었습니다.');
-    setEdit(true);
     }
 };
 
@@ -101,15 +105,34 @@ const handleAlert = ({type, text}) => {
           handleCall={handleCall}
           handleEmail={handleEmail}
           handleSubmit={handleSubmit}
-          handleEdit={handleEdit}
-          name={name}
-          school={school}
-          call={call}
-          email={email}
+          name={name1}
+          school={school1}
+          call={call1}
+          email={email1}
           edit={edit}
+          index={index1}
+          />
+<UserForm
+          handleName={handleName}
+          handleSchool={handleSchool}
+          handleCall={handleCall}
+          handleEmail={handleEmail}
+          handleSubmit={handleSubmit}
+          name={name2}
+          school={school2}
+          call={call2}
+          email={email2}
+          edit={edit}
+          index={index2}
           />
           
         </div>
+        <div>
+        {edit ? 
+          (<Button type='submit' text= '제출' onClick={handleSubmit}></Button>) : 
+          (<Button type='button' text= '수정' onClick={handleEdit}></Button>)
+        }
+      </div>
       </div>
     </main>
   );
