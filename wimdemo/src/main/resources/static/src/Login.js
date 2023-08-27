@@ -16,6 +16,7 @@ function Create(Props){
 	
 	const [id, setId] = useState('');
     const [password, setPassword] = useState('');
+        const [message, setMessage] = useState('');
     
     const handleSubmit = async (event) => {
     event.preventDefault();
@@ -38,11 +39,10 @@ function Create(Props){
 
             // 서버 응답 처리
             if (response.ok) {
-                // 로그인 성공 처리
-                console.log('로그인 성공');
+                const data = await response.json(); // JSON 형식으로 응답을 파싱
+                setMessage(data.message); // 응답 데이터의 "message" 프로퍼티를 가져와 메시지 업데이트
             } else {
-                // 로그인 실패 처리
-                console.error('로그인 실패');
+                setMessage('로그인 실패');
             }
         } catch (error) {
             console.error('서버 요청 오류:', error);
