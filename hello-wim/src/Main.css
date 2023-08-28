@@ -32,9 +32,10 @@
   /*border-bottom: 1px solid var(--mainBlack);  밑면에만 테두리 추가 */
   outline: none;
   height: 7rem;
-  width: 45rem;
+  width: 100%;
   font-size: 20px;
   display: flex;
-  justify-content: left;
+  text-align: center;
+  justify-content: center;
   flex-direction: column;
 }

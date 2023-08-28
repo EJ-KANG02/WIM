@@ -38,6 +38,9 @@ body {
 }
 
 .MenuBar {
+  position: fixed;
+  top: 0;  /* 또는 원하는 위치 */
+  z-index: 1000; /* 다른 요소 위에 표시되게 하려면 높은 z-index */
   display: flex;
   width: 20rem;
   height: 100%;
@@ -63,10 +66,8 @@ body {
   outline: 0;
   border: none;
   border-radius: 50px;;
-  display: block;
-  margin-left: -2rem;
-  margin-bottom: 5rem;
-  height: 10rem;
+  display: block; 
+  height: 5rem;
   width: 17rem;
   cursor: pointer;
   display: flex;
@@ -74,3 +75,17 @@ body {
   justify-content: center;
   
 }
+
+.backbtn {
+  text-decoration: none;
+  display: flex;
+  background-color: var(--mainWhite);
+  outline: 0;
+  border: none;
+  border-radius: 50px;;
+  margin-left: -2rem;
+  margin-bottom: 3rem;
+  height: 7rem;
+  align-items: center;
+}
+

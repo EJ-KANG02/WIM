@@ -92,6 +92,7 @@ const handleAlert = ({type, text}) => {
       <div className="Introduce">
             Who I am? Make your PortFolio, W I M
           </div>
+          <hr style={{marginBottom: '3rem'}}/>
       <div className="Main">
         <div className="MenuBar">
           {/* menuList */}

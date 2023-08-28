@@ -1,10 +1,3 @@
-.MenuBar {
-    position: fixed;
-    top: 0;  /* 또는 원하는 위치 */
-    left: 0;  /* 또는 원하는 위치 */
-    z-index: 1000; /* 다른 요소 위에 표시되게 하려면 높은 z-index */
-  }
-
 .PostTitle {
     background-color: var(--mainWhite);
     border: solid 2px var(--secondColor); 

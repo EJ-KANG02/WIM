@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './MenuList.css'
 
 const MenuList = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', marginTop: '4rem'}}>
+    <div style={{ display: 'flex', flexDirection: 'column', marginTop: '24rem'}}>
         <div className="backbtn">
     <button className='menubtn'>
       <Link to="/Newportfolio">새 포트폴리오</Link>
