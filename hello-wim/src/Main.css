@@ -14,30 +14,14 @@
   justify-content: flex-end;
 }
 
-.Banner {
-  background-color: var(--primaryColor);
-  display: flex; 
-  width: 100%;
-  height: 15rem;
-  align-items: center;
-  justify-content: center;
-}
-
 .Main {
   display: flex;
-  height: 1200px;
-}
-
-.MenuBar {
-  display: flex;
-  width: 20rem;
-  background-image: linear-gradient(to right, var(--secondColor) 60%, transparent 40%);
+  height: 100%;
 }
 
 .UserForm {
   display: flex;
   width: 50%;
-  flex-direction: row;  /* 가로로 정렬 */
   margin-left: 17rem;
 }
 

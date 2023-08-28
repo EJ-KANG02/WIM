@@ -1,0 +1,28 @@
+.MenuBar {
+    position: fixed;
+    top: 0;  /* 또는 원하는 위치 */
+    left: 0;  /* 또는 원하는 위치 */
+    z-index: 1000; /* 다른 요소 위에 표시되게 하려면 높은 z-index */
+  }
+
+.PostTitle {
+    background-color: var(--mainWhite);
+    border: solid 2px var(--secondColor); 
+    outline: none;
+    height: 3rem;
+    width: 20rem;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 2rem; /* 텍스트창 간 간격 추가 */
+}
+
+.PostContent {
+    background-color: var(--mainWhite);
+    border: solid 2px var(--secondColor); 
+    outline: none;
+    height: 3rem;
+    width: 20rem;
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 2rem; /* 텍스트창 간 간격 추가 */
+}

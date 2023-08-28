@@ -1,0 +1,28 @@
+.header-card {
+    background-color: #F7D358;
+  }
+
+  .header-card .MuiCardContent-root {
+    background-color: #F7D358; /* 원하는 배경색으로 변경 */
+  }
+
+  .header-title {
+    color: #FFFFFF;
+  }
+  
+  .page-title {
+    margin-bottom: 8px;
+  }
+  
+  .field-label {
+    margin-bottom: 1px;
+  }
+  
+  .field-value {
+    margin-top: 1px;
+  }
+  
+  .edit-save-button {
+    margin-top: 16px;
+  }
+  

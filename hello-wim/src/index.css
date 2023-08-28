@@ -36,3 +36,41 @@ body {
   cursor: pointer;
   align-items: center;
 }
+
+.MenuBar {
+  display: flex;
+  width: 20rem;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--secondColor) 60%, transparent 40%);
+}
+
+.Banner {
+  background-color: var(--primaryColor);
+  display: flex; 
+  width: 100%;
+  height: 15rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.menubtn {
+  text-decoration: none;
+  color: var(--mainWhite);
+  background-color: var(--primaryColor);
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 16px;
+  outline: 0;
+  border: none;
+  border-radius: 50px;;
+  display: block;
+  margin-left: -2rem;
+  margin-bottom: 5rem;
+  height: 10rem;
+  width: 17rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}

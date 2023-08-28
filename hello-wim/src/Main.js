@@ -97,7 +97,7 @@ const handleAlert = ({type, text}) => {
           {/* menuList */}
           <MenuList />
         </div>
-        <div className="UserForm">
+        <div className="UserForm" style={ {flexDirection: 'row'} }>
           {/* UserForm */}
           <UserForm
           handleName={handleName}

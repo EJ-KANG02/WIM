@@ -8,24 +8,3 @@
     height: 8rem;
     align-items: center;
   }
-
-  .menubtn {
-    text-decoration: none;
-    color: var(--mainWhite);
-    background-color: var(--primaryColor);
-    text-align: center;
-    letter-spacing: 0;
-    font-size: 16px;
-    outline: 0;
-    border: none;
-    border-radius: 2px;;
-    display: block;
-    height: 6rem;
-    width: 20rem;
-    line-height: 36px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
