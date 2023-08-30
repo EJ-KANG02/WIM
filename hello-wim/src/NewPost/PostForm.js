@@ -16,4 +16,5 @@ export const PostForm = ({ newPost, setNewPost, handleAdd }) => (
         제출
       </button>
     </div>
-  );
+  ); 
+  /* 당분간 무시 */

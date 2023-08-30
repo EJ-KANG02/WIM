@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import '../Newportfolio.css';
-import '../index.css';
 
 export const MenuBar = () => {
   const [pageCount, setPageCount] = useState(1);
