@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './Main'
 import Signin from './components/Signin'
 import Signup from './components/Signup'
+import EmailCode from './components/EmailCode'
 import Newportfolio from './Newportfolio';
 
  const App = () => {
@@ -26,6 +27,7 @@ import Newportfolio from './Newportfolio';
       <Routes>
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/EmailCode" element={<EmailCode />} />
         <Route path="/Newportfolio" element={<Newportfolio />} />
         <Route exact path="/" element={isLogin ? <Main isLogin={isLogin}/> : <Main />} />
       </Routes>

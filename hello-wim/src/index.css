@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-h1 {
-  color: var(--mainWhite);
-}
-
 body {
   background: var(--mainWhite);
   color: var(--mainBlack);
